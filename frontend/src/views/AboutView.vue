@@ -7,7 +7,7 @@ const password = ref('');
  
 const doLogin = () => {
   axios.get('/sanctum/csrf-cookie').then(() => {
-    axios.post('/login', {
+    axios.post('/api/login', {
       email: email.value,
       password: password.value,
     })
